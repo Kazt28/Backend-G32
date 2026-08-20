@@ -1,0 +1,27 @@
+#Compara resultados
+a = 40
+b = 60
+
+# Igualdad
+
+print(a==b)
+
+#Diferencia
+
+print(a!=b)
+
+# Mayor que
+
+print(a>b)
+
+# Menor que
+
+print(a<b)
+
+# Mayor igual que
+
+print(a>=b)
+
+# Menor igual que
+
+print(a<=b)
