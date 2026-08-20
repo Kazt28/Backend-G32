@@ -10,14 +10,14 @@
 # 2. Dado un total de segundos (3746), Calcula cuentas horas, minutos 
 # y segundos representan usando los operadores aritmeticos // y %
 
-# segundos = 3746
+segundos = 3746
 
-# minutos = segundos // 60
-# print(minutos)
-# horas = minutos // 60
-# print(horas)
-# segundoss = segundos % 60
-# print(segundoss)
+minutos = segundos // 60
+print(minutos)
+horas = minutos // 60
+print(horas)
+segundoss = segundos % 60
+print(segundoss)
 
 # 3. Ingresa un numero y quiero que me diga si es PAR o IMPAR (use el operador aritmetico %)
 
