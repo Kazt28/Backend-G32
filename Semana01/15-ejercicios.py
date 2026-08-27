@@ -23,14 +23,14 @@ for name in nombres:
 precios = [10.5, 14.8, 17.2, 19.45]
 
 for p in precios:
-    average = sum(precios) / len(precios)
+    average = round(sum(precios) / len(precios), 2)
+print("\n")    
 print(average)
 
 # 4. Tengo la siguiente lista de tuplas estudiantes = [("Juana", 26), ("David", 30), ("Ronaldo",18), ("Fatima", 23)] 
 # usando un for desempaquete la tupla e imprime usando el formato "NOMBRE tiene EDAD años"
 
 estudiantes = [("Juana", 26), ("David", 30), ("Ronaldo",18), ("Fatima", 23)] 
-
 
 for name, edad in estudiantes:
     print(f"{name} tiene {edad} años")
@@ -54,6 +54,7 @@ producto = {
 
 print(f"La cantidad de contras son: {len(producto['contras'])} y la cantidad de pros son: {len(producto['pros'])}")
 print(f"El pais de procedencia es {producto['info_adicional']['pais_procedencia']}")
+print(f"El ultimo contra es: {producto["contras"][-1]}")
 
 
 # 6. Tengo una lista de tuplas ventas = [("enero", 1500), ("febrero", 2300), ("marzo",1800)] 
