@@ -1,0 +1,42 @@
+# En python tambien se pueden pasar n parametros con el nombre del parametro usando los
+# ** Kwargss (keyword arguments)
+
+def crear_perfil(id, **datos):
+    
+    print(id)
+    print(datos)
+    if datos.get("correo") or datos.get("email"):
+        print("Se envio el correo de bienvenida")
+    else:
+        print("No se envio el correo")
+    
+crear_perfil(id=1, nombre="Eduardo", edad=30)
+crear_perfil(id=2, nombre="Valeria", nacionalidad="Peruana", estado_civil = "viuda", email = "val123@hotmail.com")
+
+# Se puede combinar los *args con los *kwargs pero siguiendo el orden de primero los args y luego los kwargs
+
+def registrar_alumno(nombre, *cursos, **datos_extra):
+    print(f"Alumno {nombre}")
+    
+    print("Cursos Inscritos")
+    for curso in cursos:
+        print(f"* {curso}")
+        
+    print("Datos adicionales")
+    for clave, valor in datos_extra.items():
+        print(f"* {clave}: {valor}")
+
+registrar_alumno("Eduardo", "Python", "Flask", "Django",
+                 edad = 30,
+                 ciudad = "Arequipa", 
+                 hobbies = ["Nada", "Enseñar", "Jugar"])
+
+
+def calcular_total(*montos, **otros_valores):
+    total = 0
+    for monto in montos:
+        total += monto
+    # .get como segundo parametro se le puede pasar un valor por defecto.
+    divisa = otros_valores.get("moneda", "USD")
+    print(f"Tota es: {total} {divisa}")
+calcular_total(100, 200, 300, moneda = "PEN")
