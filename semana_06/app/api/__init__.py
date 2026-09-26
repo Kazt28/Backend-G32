@@ -1,0 +1,2 @@
+from .categorias import CategoriaController
+
